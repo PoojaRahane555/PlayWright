@@ -1,0 +1,92 @@
+const {test,expect} = require('@playwright/test')
+
+test('Drag nd Drop using inbuild command',async({page}) =>{
+
+    await page.goto('http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html')
+    const Washington = await page.locator('#box3')
+    const united = await page.locator('#box103')
+    await Washington.dragTo(united)
+    // await expect(page.locator('#box3')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    expect(await page.locator('#box3')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    await page.waitForTimeout(5000)
+
+    const rome = await page.locator('#box6')
+    const italy = await page.locator('#box106')
+    await rome.dragTo(italy)
+    await expect(page.locator('#box6')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+
+    const madrid = await page.locator('#box7')
+    const spain = await page.locator('#box107')
+    await madrid.dragTo(spain)
+    await expect(page.locator('#box7')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    await page.waitForTimeout(3000)
+
+    const oslo = await page.locator('#box1')
+    const norway = await page.locator('#box101')
+    await oslo.dragTo(norway)
+    await expect(page.locator('#box1')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+
+    const stockholm = await page.locator('#box2')
+    const sweden = await page.locator('#box102')
+    await stockholm.dragTo(sweden)
+    await expect(page.locator('#box2')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+
+    const seoul = await page.locator('#box5')
+    const southKoria = await page.locator('#box105')
+    await seoul.dragTo(southKoria)
+    await expect(page.locator('#box5')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+
+    const copenHagen = await page.locator('#box4')
+    const denmark = await page.locator('#box104')
+    await copenHagen.dragTo(denmark)
+    await expect(page.locator('#box4')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    await page.waitForTimeout(5000)
+})
+
+test.only('',async({page}) =>{
+    await page.goto('http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html')
+    await page.locator('#box3').hover()
+    await page.mouse.down()
+    await page.locator('#box103').hover()
+    await page.mouse.up()
+    await expect(page.locator('#box3')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    await page.waitForTimeout(5000)
+
+    await page.locator('#box6').hover()
+    await page.mouse.down()
+    await page.locator('#box106').hover()
+    await page.mouse.up()
+    await expect(page.locator('#box6')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+
+    await page.locator('#box7').hover()
+    await page.mouse.down()
+    await page.locator('#box107').hover()
+    await page.mouse.up()
+    await expect(page.locator('#box7')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+
+    await page.locator('#box1').hover()
+    await page.mouse.down()
+    await page.locator('#box101').hover()
+    await page.mouse.up()
+    await expect(page.locator('#box1')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+    await page.waitForTimeout(5000)
+
+    await page.locator('#box2').hover()
+    await page.mouse.down()
+    await page.locator('#box102').hover()
+    await page.mouse.up()
+    await expect(page.locator('#box2')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+
+    await page.locator('#box5').hover()
+    await page.mouse.down()
+    await page.locator('#box105').hover()
+    await page.mouse.up()
+    await expect(page.locator('#box5')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);')
+
+    await page.locator('#box4').hover()
+    await page.mouse.down()
+    await page.locator('#box104').hover()
+    await page.mouse.up()
+    await expect(page.locator('#box4')).toHaveAttribute('style','visibility: visible; background-color: rgb(0, 255, 0);') 
+    await page.waitForTimeout(5000)
+})
