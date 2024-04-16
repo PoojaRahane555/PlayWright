@@ -7,7 +7,7 @@ test('Verify datePicker functionality in playwright by using object',async({page
     console.log(dt)
 
     // let mnth = date.getMonth()            // current month index
-    // let mnth = date.getMonth() + 1           // to get month in number
+    // let mnth = date.getMonth() + 1        // to get month in number
     // let mnths = `${0}${mnth}`
     // let mnth = date.toLocaleString('default',{month:'short'})   // to get month name in short form
     let mnth = date.toLocaleString('default',{month:'long'})       // to get month name in long form

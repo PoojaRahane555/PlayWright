@@ -31,6 +31,4 @@ test.only('',async({page})=>{
     await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     await expect(page.locator('.orangehrm-login-forgot-header')).toHaveText('Forgot your password? ')
     await expect(page.locator('.orangehrm-login-forgot-header')).toBeVisible()
-
-
 })
