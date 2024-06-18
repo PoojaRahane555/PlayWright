@@ -44,7 +44,7 @@ test('Verify getByTitle method in playwright',async({page}) =>{
     await page.waitForTimeout(3000)
 })
 
-test('Verify getByAltText method in playwright',async({page}) =>{ 
+test('Verify getByTitle method in playwright',async({page}) =>{ 
     await page.goto('https://letcode.in/radio')
     let ele6 = await page.getByTitle('Advertisement').first()
     await expect(ele6).toBeVisible()

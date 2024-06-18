@@ -20,7 +20,8 @@ test("Handeling Checkboxes with playwright",async({page}) =>{
 
     await page.locator('#vfb-6-2').check()
     await page.waitForTimeout(2000)
-    await expect(page.locator('#vfb-6-2')).toBeChecked()
+    await expect(page.locator('#vfb-6-2')).toBeChecked().isBeTruthy()
+    // isBeFalsy()
 
     await page.locator('#vfb-6-0').check()
     await page.waitForTimeout(1000)

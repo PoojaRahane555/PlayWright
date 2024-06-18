@@ -12,13 +12,47 @@ tests
 false 
 enter
 
+After INSTALLATION:
+package.json  => node project management file
+playwright.config.js  => playwright basic specific config file
+tests => to create all the test in this folder
+
+require('@playwright/test')          =>playwright module
+{test,expect}                       => two packages
+{page} =>page fixture:which contains so many functions and through them we can automate web application 
+
 
 open playwright.config.js 
 comment firefox and webkit to use only one chrome browser
 
 npx playwright test :                        Runs all the testcases under tests folder in headless mode.
-npx playwright test –headed :                Runs all the testcases under tests folder in headed mode.
-npx playwright test --headed –ui :           Opens the playwright traces window
+npx playwright test filename -–headed :      Runs all the testcases under tests folder in headed mode.
+npx playwright test --headed –ui :           Opens the playwright traces window/used to start interact ui mode
 npx playwright test XYZ--headed --ui :       To run the (XYZ/specific) testcase under tests folder
 npx playwright test XYZ --headed --debug :   Opens the debugger window in playwright.
+npx playwright test --project=chromium       Runs the tests only on desktop chrome
+
+npx playwright test example                  Runs the tests in specific file
+npx playwright test codegen                  Autogenerate tests with codegen
+npm playwright -v                            To check current version of playwright
+npx playwright show-report                   to generate html report
+
+for debug:
+npx playwright test filename -–headed --debug
+
+automatically generate code:
+npx playwright codegen                       generate code
+npx playwright code --help                   use of all the option
+npx playwright code --output tests/mytest.spec.js        => whatever we recorded test will copy in this particular file
+or
+npx playwright code -o tests/mytest.spec.js 
+
+npx playwright codegen --target javascript             =>to generate code in particular language
+npx playwright code -b chromium
+npx playwright codegen --device "iPhone 13"            => to open on iPhone tab 
+npx playwright codegen --viewport-size "1280,720"
+
+hard assertion : when test case gets fails program get terminated
+soft assertion : failed soft assertion do not terminate test execution
+
 

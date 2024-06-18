@@ -6,6 +6,11 @@ const {test,expect} = require('@playwright/test')
 test('Verify static dropDown in Playwright',async({page})=>{
     await page.goto('https://letcode.in/dropdowns')
     await page.locator('#fruits').selectOption('1')
+    // await page.locator('#fruits').selectOption('Mango')
+    // await page.locator('#fruits').selectOption({value:"1"})
+    // await page.locator('#fruits').selectOption({index:1})
+    // await page.selectOption('#fruits','Mango')
+
     await expect(page.locator('.subtitle')).toBeVisible()
     await expect(page.locator('.subtitle')).toHaveText('You have selected Mango')
     // await page.waitForTimeout(3000)

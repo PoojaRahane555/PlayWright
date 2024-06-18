@@ -1,0 +1,26 @@
+PLAYWRIGHT:
+->Applications Supported - Web browser apps, mobile web apps, Applications
+->Languages Supported - Javascript, Typescript, Java, Python and .Net(C#) 
+->Browser Supported - Chromium, Webkit(Safari), and Firefox(headed/headless)
+->OS Supported - Windows, MacOs, Linux, Support CI Runs
+->Features playwright
+    Free and open source(Customize tool)
+    easy setup and configuration
+    multi-browser, Multi-Language
+    Functional, API, accessibility testing
+    Built-in reports, custom reports
+    supports all CA envirionment -CI, CD, Docker
+    parallel testing, cross-Browser testing
+    Auto wait
+    Built-in assertions
+    Multi Tab and multi Window
+    Frames, Shadow dom 
+    Test parameter
+    Emulate mobile devices
+    Fast
+    no flaky tests/unstable tests
+    high performance
+    used with popular frameworks like Jest ,Mocha
+    community support - Growing community
+    debugging - built-in debuggers and DevTools integration
+    Real time test execution - no
